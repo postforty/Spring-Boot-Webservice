@@ -1,4 +1,4 @@
-package com.tistory.postforty.springwebservice;
+package com.tistory.postforty.book;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
