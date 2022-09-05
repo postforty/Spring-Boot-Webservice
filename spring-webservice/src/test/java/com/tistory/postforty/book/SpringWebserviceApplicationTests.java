@@ -1,4 +1,4 @@
-package com.tistory.postforty.springwebservice;
+package com.tistory.postforty.book;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
