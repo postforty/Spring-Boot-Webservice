@@ -30,7 +30,7 @@ public class PostsApiControllerTest {
 	private int port;
 	
 	@Autowired
-	private TestRestTemplate restTemplate; // @WebMvcTest´Â JPA ±â´É ÀÛµ¿ ÇÏÁö ¾ÊÀ½. JPA ±â´É Å×½ºÆ®ÇÒ ‹š´Â @SpringBootTest¿Í TestRestTemplateÀ» »ç¿ë
+	private TestRestTemplate restTemplate; // @WebMvcTestëŠ” JPA ê¸°ëŠ¥ ì‘ë™ í•˜ì§€ ì•ŠìŒ. JPA ê¸°ëŠ¥ í…ŒìŠ¤íŠ¸í•  ë–„ëŠ” @SpringBootTestì™€ TestRestTemplateì„ ì‚¬ìš©
 	
 	@Autowired
 	private PostsRepository postsRepository;
@@ -41,7 +41,7 @@ public class PostsApiControllerTest {
 	}
 	
 	@Test
-	public void Posts_µî·ÏµÈ´Ù() throws Exception {
+	public void Posts_ë“±ë¡ëœë‹¤() throws Exception {
 		// given
 		String title = "title";
 		String content = "content";
@@ -67,7 +67,7 @@ public class PostsApiControllerTest {
 
 	
 	@Test
-	public void Posts_¼öÁ¤µÈ´Ù() throws Exception {
+	public void Posts_ìˆ˜ì •ëœë‹¤() throws Exception {
 		// given
 		Posts savedPosts = postsRepository.save(Posts.builder()
 				.title("title")

@@ -12,14 +12,14 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-@Entity // Å×ÀÌºí°ú ¸µÅ©µÉ Å¬·¡½º
+@Entity // í…Œì´ë¸”ê³¼ ë§í¬ë  í´ë˜ìŠ¤
 public class Posts {
 	
-	@Id // PK ÇÊµå
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // PKÀÇ »ı¼º ±ÔÄ¢, GenerationType.IDENTITY´Â auto_increment
+	@Id // PK í•„ë“œ
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // PKì˜ ìƒì„± ê·œì¹™, GenerationType.IDENTITYëŠ” auto_increment
 	private Long id;
 	
-	@Column(length = 500, nullable = false) // ¼±¾ğÇÏÁö ¾Ê¾Æµµ ColumnÀ¸·Î ÀÎ½ÄÇÏ³ª ¼±¾ğÇÑ ÀÌÀ¯´Â ÇÊ¿äÇÑ ¿É¼ÇÀ» ÁÖ±â À§ÇÔ
+	@Column(length = 500, nullable = false) // ì„ ì–¸í•˜ì§€ ì•Šì•„ë„ Columnìœ¼ë¡œ ì¸ì‹í•˜ë‚˜ ì„ ì–¸í•œ ì´ìœ ëŠ” í•„ìš”í•œ ì˜µì…˜ì„ ì£¼ê¸° ìœ„í•¨
 	private String title;
 	
 	@Column(columnDefinition = "TEXT", nullable = false)
@@ -27,7 +27,7 @@ public class Posts {
 	
 	private String author;
 
-	@Builder // ÇØ´ç Å¬·¡½ºÀÇ ºô´õ ÆĞÅÏ Å¬·¡½º »ı¼º. »ı¼ºÀÚ »ó´Ü ¼±¾ğ ½Ã »ı¼ºÀÚ¿¡ Æ÷ÇÔµÈ ÇÊµå¸¸ ºô´õ¿¡ Æ÷ÇÔ
+	@Builder // í•´ë‹¹ í´ë˜ìŠ¤ì˜ ë¹Œë” íŒ¨í„´ í´ë˜ìŠ¤ ìƒì„±. ìƒì„±ì ìƒë‹¨ ì„ ì–¸ ì‹œ ìƒì„±ìì— í¬í•¨ëœ í•„ë“œë§Œ ë¹Œë”ì— í¬í•¨
 	public Posts(String title, String content, String author) {
 		this.title = title;
 		this.content = content;

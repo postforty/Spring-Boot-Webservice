@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Getter
-@RequiredArgsConstructor // ¼±¾ğµÈ ¸ğµç final ÇÊµå°¡ Æ÷ÇÔµÈ »ı¼ºÀÚ »ı¼º(final ¾ø´Â ÇÊµå´Â »ı¼ºÀÚ Æ÷ÇÔµÇÁö ¾ÊÀ½)
+@RequiredArgsConstructor // ì„ ì–¸ëœ ëª¨ë“  final í•„ë“œê°€ í¬í•¨ëœ ìƒì„±ì ìƒì„±(final ì—†ëŠ” í•„ë“œëŠ” ìƒì„±ì í¬í•¨ë˜ì§€ ì•ŠìŒ)
 public class HelloResponseDto {
 	
 	private final String name;

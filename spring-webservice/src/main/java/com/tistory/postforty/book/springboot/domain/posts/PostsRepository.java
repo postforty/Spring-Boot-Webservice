@@ -2,6 +2,6 @@ package com.tistory.postforty.book.springboot.domain.posts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PostsRepository extends JpaRepository<Posts, Long>{ // JpaRepository<Entity Å¬·¡½º, PK Å¸ÀÔ> »ó¼ÓÇÏ¸é ±âº» CRUD ¸Ş¼­µå ÀÚµ¿ »ı¼º. @Repository Ãß°¡ ÇÊ¿ä ¾øÀ½. Entity Å¬·¡½º¿Í ±âº» Entity Repository´Â ÇÔ²² À§Ä¡
+public interface PostsRepository extends JpaRepository<Posts, Long>{ // JpaRepository<Entity í´ë˜ìŠ¤, PK íƒ€ì…> ìƒì†í•˜ë©´ ê¸°ë³¸ CRUD ë©”ì„œë“œ ìë™ ìƒì„±. @Repository ì¶”ê°€ í•„ìš” ì—†ìŒ. Entity í´ë˜ìŠ¤ì™€ ê¸°ë³¸ Entity RepositoryëŠ” í•¨ê»˜ ìœ„ì¹˜
 
 }

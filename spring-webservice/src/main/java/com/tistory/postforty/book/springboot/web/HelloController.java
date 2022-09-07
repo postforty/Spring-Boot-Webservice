@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tistory.postforty.book.springboot.web.dto.HelloResponseDto;
 
-@RestController // ÄÁÆ®·Ñ·¯¸¦ JSONÀ» ¹İÈ¯ÇÏ´Â ÄÁÆ®·Ñ·¯·Î ¸¸µê. @ResponsBody¸¦ °¢ ¸Ş¼Òµå¸¶´Ù ¼±¾ğÇß´ø °ÍÀ» ÇÑ¹ø¿¡ »ç¿ëÇÒ ¼ö ÀÖ°Ô ÇÔ
+@RestController // ì»¨íŠ¸ë¡¤ëŸ¬ë¥¼ JSONì„ ë°˜í™˜í•˜ëŠ” ì»¨íŠ¸ë¡¤ëŸ¬ë¡œ ë§Œë“¦. @ResponsBodyë¥¼ ê° ë©”ì†Œë“œë§ˆë‹¤ ì„ ì–¸í–ˆë˜ ê²ƒì„ í•œë²ˆì— ì‚¬ìš©í•  ìˆ˜ ìˆê²Œ í•¨
 public class HelloController {
 	
-	@GetMapping("/hello") // HTTP MethodÀÎ Get ¿äÃ»À» ¹ŞÀ» ¼ö ÀÖ´Â API¸¦ ¸¸µê. @RequestMapping(method = RequestMethod.GET)¿Í µ¿ÀÏ.
+	@GetMapping("/hello") // HTTP Methodì¸ Get ìš”ì²­ì„ ë°›ì„ ìˆ˜ ìˆëŠ” APIë¥¼ ë§Œë“¦. @RequestMapping(method = RequestMethod.GET)ì™€ ë™ì¼.
 	public String hello() {
 		return "hello";
 	}

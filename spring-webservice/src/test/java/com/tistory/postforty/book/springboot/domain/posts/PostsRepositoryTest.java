@@ -12,31 +12,31 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest // H2 µ¥ÀÌÅÍº£ÀÌ½º ÀÚµ¿ ½ÇÇà
+@SpringBootTest // H2 ë°ì´í„°ë² ì´ìŠ¤ ìë™ ì‹¤í–‰
 public class PostsRepositoryTest {
 	
 	@Autowired
 	PostsRepository postsRepository;
 	
-	@After // Junit¿¡¼­ ´ÜÀ§ Å×½ºÆ®°¡ ³¡³¯ ¶§¸¶´Ù ¼öÇàµÇ´Â ¸Ş¼­µå ÁöÁ¤
+	@After // Junitì—ì„œ ë‹¨ìœ„ í…ŒìŠ¤íŠ¸ê°€ ëë‚  ë•Œë§ˆë‹¤ ìˆ˜í–‰ë˜ëŠ” ë©”ì„œë“œ ì§€ì •
 	public void cleanup() {
 		postsRepository.deleteAll();
 	}
 
 	@Test
-	public void °Ô½Ã±ÛÀúÀå_ºÒ·¯¿À±â() {
+	public void ê²Œì‹œê¸€ì €ì¥_ë¶ˆëŸ¬ì˜¤ê¸°() {
 		// given
-		String title = "Å×½ºÆ® °Ô½Ã±Û";
-		String content = "Å×½ºÆ® º»¹®";
+		String title = "í…ŒìŠ¤íŠ¸ ê²Œì‹œê¸€";
+		String content = "í…ŒìŠ¤íŠ¸ ë³¸ë¬¸";
 		
-		postsRepository.save(Posts.builder() // id °ªÀÌ ÀÖ´Ù¸é update, ¾ø´Ù¸é insert Äõ¸® ½ÇÇà
+		postsRepository.save(Posts.builder() // id ê°’ì´ ìˆë‹¤ë©´ update, ì—†ë‹¤ë©´ insert ì¿¼ë¦¬ ì‹¤í–‰
 				.title(title)
 				.content(content)
 				.author("dandycode.kr@gmail.com")
 				.build());
 		
 		// when
-		List<Posts> postsList = postsRepository.findAll(); // Å×ÀÌºí posts¿¡ ÀÖ´Â ¸ğµç µ¥ÀÌÅÍ Á¶È¸
+		List<Posts> postsList = postsRepository.findAll(); // í…Œì´ë¸” postsì— ìˆëŠ” ëª¨ë“  ë°ì´í„° ì¡°íšŒ
 		
 		// then
 		Posts posts = postsList.get(0);

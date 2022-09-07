@@ -1,12 +1,12 @@
 package com.tistory.postforty.book.springboot.web.dto;
 
 import org.junit.Test;
-import static org.assertj.core.api.Assertions.assertThat; // assertjÀÇ ÀåÁ¡Àº CoreMatchers¿Í ´Ş¸® Ãß°¡Àû ¶óÀÌºê·¯¸® ºÒÇÊ¿ä, ÀÚµ¿¿Ï¼ºÀÌ º¸´Ù È®½Ç
+import static org.assertj.core.api.Assertions.assertThat; // assertjì˜ ì¥ì ì€ CoreMatchersì™€ ë‹¬ë¦¬ ì¶”ê°€ì  ë¼ì´ë¸ŒëŸ¬ë¦¬ ë¶ˆí•„ìš”, ìë™ì™„ì„±ì´ ë³´ë‹¤ í™•ì‹¤
 
 public class HelloResponseDtoTest {
 	
 	@Test
-	public void ·Òº¹_±â´É_Å×½ºÆ®() {
+	public void ë¡¬ë³µ_ê¸°ëŠ¥_í…ŒìŠ¤íŠ¸() {
 		// given
 		String name = "test";
 		int amount = 1000;
@@ -15,7 +15,7 @@ public class HelloResponseDtoTest {
 		HelloResponseDto dto = new HelloResponseDto(name, amount);
 		
 		// then
-		assertThat(dto.getName()).isEqualTo(name); // assertj Å×½ºÆ® ¶óÀÌºê·¯¸®ÀÇ assertThat ¸Ş¼­µå. °ËÁõ ´ë»óÀ» ¸Ş¼­µå ÀÎÀÚ·Î ¹ŞÀ½. ¸Ş¼­µå Ã¼ÀÌ´× Áö¿ø isEqualTo(µ¿µî ºñ±³ ¸Ş¼­µå) ÀÌ¾î »ç¿ëÇÏ¿´À½
+		assertThat(dto.getName()).isEqualTo(name); // assertj í…ŒìŠ¤íŠ¸ ë¼ì´ë¸ŒëŸ¬ë¦¬ì˜ assertThat ë©”ì„œë“œ. ê²€ì¦ ëŒ€ìƒì„ ë©”ì„œë“œ ì¸ìë¡œ ë°›ìŒ. ë©”ì„œë“œ ì²´ì´ë‹ ì§€ì› isEqualTo(ë™ë“± ë¹„êµ ë©”ì„œë“œ) ì´ì–´ ì‚¬ìš©í•˜ì˜€ìŒ
 		assertThat(dto.getAmount()).isEqualTo(amount);
 	}
 

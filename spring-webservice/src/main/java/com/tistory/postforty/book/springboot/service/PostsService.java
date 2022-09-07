@@ -11,7 +11,7 @@ import com.tistory.postforty.book.springboot.web.dto.PostsUpdateRequestDto;
 
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor // ·Òº¹ ¾î³ëÅ×ÀÌ¼Ç. »ı¼ºÀÚ·Î Bean °´Ã¼ ¹Şµµ·Ï ÇÔ. Autowired¿Í µ¿ÀÏÇÑ È¿°ú. final ¼±¾ğµÈ ¸ğµç ÇÊµå¸¦ ÀÎÀÚ°ªÀ¸·Î ÇÏ´Â »ı¼ºÀÚ¸¦ »ı¼º. ÇØ´ç Å¬·¡½ºÀÇ ÀÇÁ¸¼º °ü°è°¡ º¯°æµÉ ¶§¸¶´Ù »ı¼ºÀÚ ÄÚµå¸¦ °è¼ÓÇØ¼­ ¼öÁ¤ÇÏ´Â ¹ø°Å·Î¿ò ÇØ°á
+@RequiredArgsConstructor // ë¡¬ë³µ ì–´ë…¸í…Œì´ì…˜. ìƒì„±ìë¡œ Bean ê°ì²´ ë°›ë„ë¡ í•¨. Autowiredì™€ ë™ì¼í•œ íš¨ê³¼. final ì„ ì–¸ëœ ëª¨ë“  í•„ë“œë¥¼ ì¸ìê°’ìœ¼ë¡œ í•˜ëŠ” ìƒì„±ìë¥¼ ìƒì„±. í•´ë‹¹ í´ë˜ìŠ¤ì˜ ì˜ì¡´ì„± ê´€ê³„ê°€ ë³€ê²½ë  ë•Œë§ˆë‹¤ ìƒì„±ì ì½”ë“œë¥¼ ê³„ì†í•´ì„œ ìˆ˜ì •í•˜ëŠ” ë²ˆê±°ë¡œì›€ í•´ê²°
 @Service
 public class PostsService {
 	private final PostsRepository postsRepository;
@@ -23,14 +23,14 @@ public class PostsService {
 	
 	@Transactional
 	public Long update(Long id, PostsUpdateRequestDto requestDto) {
-		Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("ÇØ´ç °Ô½Ã±ÛÀÌ ¾ø½À´Ï´Ù. id="+ id));
+		Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("í•´ë‹¹ ê²Œì‹œê¸€ì´ ì—†ìŠµë‹ˆë‹¤. id="+ id));
 		posts.update(requestDto.getTitle(), requestDto.getContent());
 		
 		return id;
 	}
 	
 	public PostsResponseDto findById (Long id) {
-		Posts entity = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("ÇØ´ç °Ô½Ã±ÛÀÌ ¾ø½À´Ï´Ù. id=" + id));
+		Posts entity = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("í•´ë‹¹ ê²Œì‹œê¸€ì´ ì—†ìŠµë‹ˆë‹¤. id=" + id));
 		
 		return new PostsResponseDto(entity);
 	}

@@ -14,33 +14,33 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-@RunWith(SpringRunner.class) // Å×½ºÆ®¸¦ ÁøÇàÇÒ ¶§ JUnint¿¡ ³»ÀåµÈ ½ÇÇàÀÚ ¿Ü¿¡ ´Ù¸¥ ½ÇÇàÀÚ¸¦ ½ÇÇà. ½ºÇÁ¸µ ºÎÆ® Å×½ºÆ®¿Í JUnit »çÀÌ ¿¬°áÀÚ ¿ªÇÒ
-@WebMvcTest(controllers = HelloController.class) // ¿©·¯ ½ºÇÁ¸µ Å×½ºÆ® ¾î³ëÅ×ÀÌ¼Ç Áß Web(Spring MVC) ±â´É À§ÁÖÀÇ ¾î³ëÅ×ÀÌ¼Ç
+@RunWith(SpringRunner.class) // í…ŒìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ë•Œ JUnintì— ë‚´ì¥ëœ ì‹¤í–‰ì ì™¸ì— ë‹¤ë¥¸ ì‹¤í–‰ìë¥¼ ì‹¤í–‰. ìŠ¤í”„ë§ ë¶€íŠ¸ í…ŒìŠ¤íŠ¸ì™€ JUnit ì‚¬ì´ ì—°ê²°ì ì—­í• 
+@WebMvcTest(controllers = HelloController.class) // ì—¬ëŸ¬ ìŠ¤í”„ë§ í…ŒìŠ¤íŠ¸ ì–´ë…¸í…Œì´ì…˜ ì¤‘ Web(Spring MVC) ê¸°ëŠ¥ ìœ„ì£¼ì˜ ì–´ë…¸í…Œì´ì…˜
 public class HelloControllerTest {
 	
-	@Autowired // ½ºÇÁ¸µÀÌ °ü¸®ÇÏ´Â Bean ÁÖÀÔ ¹ŞÀ½ 
-	private MockMvc mvc; // À¥ API Å×½ºÆ® ¿ëÀ¸·Î¼­ HTTP GET, POST µî¿¡ ´ëÇÑ API Å×½ºÆ®
+	@Autowired // ìŠ¤í”„ë§ì´ ê´€ë¦¬í•˜ëŠ” Bean ì£¼ì… ë°›ìŒ 
+	private MockMvc mvc; // ì›¹ API í…ŒìŠ¤íŠ¸ ìš©ìœ¼ë¡œì„œ HTTP GET, POST ë“±ì— ëŒ€í•œ API í…ŒìŠ¤íŠ¸
 	
 	@Test
-	public void hello°¡_¸®ÅÏµÈ´Ù() throws Exception {
+	public void helloê°€_ë¦¬í„´ëœë‹¤() throws Exception {
 		String hello = "hello";
 		
-		mvc.perform(get("/hello")) // MocMvc¸¦ ÅëÇØ /hello ÁÖ¼Ò·Î HTTP GET ¿äÃ». Ã¼ÀÌ´×ÀÌ Áö¿øµÇ¾î ¾Æ·¡¿Í °°ÀÌ ¿©·¯ °ËÁõ ±â´ÉÀ» ÀÌ¾î¼­ ¼±¾ğ °¡´É
-	        .andExpect(status().isOk()) // mvc.performÀÇ °á°ú °ËÁõ - HTTP HeaderÀÇ Status °ËÁõ
-	        .andExpect(content().string(hello)); // mvc.performÀÇ °á°ú °ËÁõ - ÀÀ´ä º»¹® ³»¿ë °ËÁõ
+		mvc.perform(get("/hello")) // MocMvcë¥¼ í†µí•´ /hello ì£¼ì†Œë¡œ HTTP GET ìš”ì²­. ì²´ì´ë‹ì´ ì§€ì›ë˜ì–´ ì•„ë˜ì™€ ê°™ì´ ì—¬ëŸ¬ ê²€ì¦ ê¸°ëŠ¥ì„ ì´ì–´ì„œ ì„ ì–¸ ê°€ëŠ¥
+	        .andExpect(status().isOk()) // mvc.performì˜ ê²°ê³¼ ê²€ì¦ - HTTP Headerì˜ Status ê²€ì¦
+	        .andExpect(content().string(hello)); // mvc.performì˜ ê²°ê³¼ ê²€ì¦ - ì‘ë‹µ ë³¸ë¬¸ ë‚´ìš© ê²€ì¦
 	}
 	
 	@Test
-	public void helloDto°¡_¸®ÅÏµÈ´Ù() throws Exception {
+	public void helloDtoê°€_ë¦¬í„´ëœë‹¤() throws Exception {
 		String name = "hello";
 		int amount = 1000;
 		
 		mvc.perform(get("/hello/dto")
 				.param("name", name)
-				.param("amount",  String.valueOf(amount))) // paramÀº API Å×½ºÆ®ÇÒ ¶§ »ç¿ëµÉ ¿äÃ» ÆÄ¶ó¹ÌÅÍ¸¦ ¼³Á¤. °ªÀº String¸¸ Çã¿ë
+				.param("amount",  String.valueOf(amount))) // paramì€ API í…ŒìŠ¤íŠ¸í•  ë•Œ ì‚¬ìš©ë  ìš”ì²­ íŒŒë¼ë¯¸í„°ë¥¼ ì„¤ì •. ê°’ì€ Stringë§Œ í—ˆìš©
 			.andExpect(status().isOk())
 			.andExpect(jsonPath("$.name", is(name)))
-			.andExpect(jsonPath("$.amount", is(amount))); // jsonPath´Â JSONÀÀ´ä°ªÀ» ÇÊµåº°·Î °ËÁõÇÏ´Â ¸Ş¼­µå. $¸¦ ±âÁØÀ¸·Î ÇÊµå¸í ¸í½Ã
+			.andExpect(jsonPath("$.amount", is(amount))); // jsonPathëŠ” JSONì‘ë‹µê°’ì„ í•„ë“œë³„ë¡œ ê²€ì¦í•˜ëŠ” ë©”ì„œë“œ. $ë¥¼ ê¸°ì¤€ìœ¼ë¡œ í•„ë“œëª… ëª…ì‹œ
 	}
 	
 }
