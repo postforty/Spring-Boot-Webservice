@@ -7,8 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Getter
 @NoArgsConstructor
 @Entity // 테이블과 링크될 클래스
 public class Posts {
@@ -31,5 +33,4 @@ public class Posts {
 		this.content = content;
 		this.author = author;
 	}
-
 }
