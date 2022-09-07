@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Entity // 테이블과 링크될 클래스
-public class Posts {
+public class Posts extends BaseTimeEntity {
 	
 	@Id // PK 필드
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // PK의 생성 규칙, GenerationType.IDENTITY는 auto_increment
