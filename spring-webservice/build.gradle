@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.7.3'
+	id 'org.springframework.boot' version '2.6.8'
 	id 'io.spring.dependency-management' version '1.0.13.RELEASE'
 	id 'java'
 }
@@ -20,9 +20,10 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // Spring Data JPA Ãß»óÈ­ ¶óÀÌºê·¯¸®
-	implementation 'com.h2database:h2' // ÀÎ¸Ş¸ğ¸® °ü°èÇü µ¥ÀÌÅÍº£ÀÌ½º. º°µµ ¼³Ä¡°¡ ºÒÇÊ¿ä. ÇÁ·ÎÁ§Æ® ÀÇÁ¸¼º¸¸ °ü¸®. ¾ÖÇÃ¸®ÄÉÀÌ¼Ç Àç½ÃÀÛ½Ã ÃÊ±âÈ­. ÁÖ·Î Å×½ºÆ® ¿ë 
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // Spring Data JPA ì¶”ìƒí™” ë¼ì´ë¸ŒëŸ¬ë¦¬
+	implementation 'com.h2database:h2' // ì¸ë©”ëª¨ë¦¬ ê´€ê³„í˜• ë°ì´í„°ë² ì´ìŠ¤. ë³„ë„ ì„¤ì¹˜ê°€ ë¶ˆí•„ìš”. í”„ë¡œì íŠ¸ ì˜ì¡´ì„±ë§Œ ê´€ë¦¬. ì• í”Œë¦¬ì¼€ì´ì…˜ ì¬ì‹œì‘ì‹œ ì´ˆê¸°í™”. ì£¼ë¡œ í…ŒìŠ¤íŠ¸ ìš© 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-mustache'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
