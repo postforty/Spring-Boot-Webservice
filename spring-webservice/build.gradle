@@ -24,6 +24,7 @@ dependencies {
 	implementation 'com.h2database:h2' // 인메모리 관계형 데이터베이스. 별도 설치가 불필요. 프로젝트 의존성만 관리. 애플리케이션 재시작시 초기화. 주로 테스트 용 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-mustache'
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
