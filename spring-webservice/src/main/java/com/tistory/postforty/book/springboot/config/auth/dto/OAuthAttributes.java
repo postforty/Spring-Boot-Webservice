@@ -25,6 +25,7 @@ public class OAuthAttributes {
 		this.picture = picture;
 	}
 	
+	// OAuth2User에서 반환하는 사용자 정보는 Map이기 떄문에 값 하나하나를 변환하야 함
 	public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
 		return ofGoogle(userNameAttributeName, attributes);
 	}
